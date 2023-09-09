@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+	<title>Hero Craft</title>
+	<link type="text/css" rel="stylesheet" href="HeroCraft.css">
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="HeroCraft.js"></script>
+</head>
+
+<body>
+
+	<div id="page-wrapper">
+
+		<div id ="screen_main">
+			<div class ="logo"><img src="image/logo.png" width="488" height="78"></div>
+			<div class ="button_component"><button id ="lv1" onclick="startGame1()">level 1</button></div>
+			<div class ="button_component"><button id ="lv2" onclick="startGame2()">level 2</button></div>
+			<div class ="button_component"><button id ="lv3" onclick="startGame3()">level 3</button></div>
+			<div class ="button_component"><button id ="gameSetting" onclick="getSettingScreen()">go to Setting</button></div>
+		</div>
+
+		<div id="content">
+			<canvas id="canvas" hidden="true" width="600" height="600" ></canvas>
+			<progress id="hp" value="150" max="150"></progress>
+			<button id="control" onclick="getMainScreen()">quit game</button>
+		</div>
+
+
+		<div id="setting_screen">
+			<div class="setting_component">
+				<div id="setting_title"><strong>Setting</strong></div>
+			<div class="tab-item">
+				<ul>
+					<!--list 1: thumbnail -->
+					<li class="item">
+						<div class="thumbnail">
+							<img src="image/icon/mute.png">
+						</div>
+						<h4>&nbsp;&#9660; 음소거 설정</h4>
+						<div class="description">
+							<input type="button" id="music" value="Mute all" onclick="fun1()"/><br>				
+							<input type="button" id="music" value="Unmute all" onclick="fun0()"/><br>		
+						</div>
+					</li>	
+					<!-- list 2: music -->
+					<li class="item">
+						<div class="thumbnail">
+							<img src="image/icon/music.png">
+						</div>
+						<div class="description">
+							<h4>&#9660; 음악 선택</h4>
+							<a id="section1">
+								<strong>♪ A Minecraft Music Video ♫</strong><hr><br>
+								<strong>"calm"</strong><br>
+								<audio id="1" src="music/calm1.ogg" type="audio/ogg" controls loop></audio><br>
+								<strong>"creative"</strong><br>
+								<audio id="2" src="music/creative1.ogg" type="audio/ogg" controls loop></audio><br>
+								<strong>"hal"</strong><br>
+								<audio id="3" src="music/hal1.ogg" type="audio/ogg" controls loop></audio><br><strong>
+								"piano"</strong><br>
+								<audio id="4" src="music/piano1.ogg" type="audio/ogg" controls loop></audio><br><hr>
+							</a>
+						</div>
+					</li>	
+					<!--list 3: wepon  -->
+					<li class="item">
+						<div class="thumbnail">
+							<img src="image/icon/weapon.png">
+						</div>
+						<div class="description">
+							<h4>&#9660; 무기 선택</h4>			
+							<a id="section2">
+								<table border="1">
+									<tr><th></th><th>Iron</th><th>Gold</th><th>Dia</th></tr>        
+									<tr><th>PickAxe</th><th><img src="image/ball/ironpickaxe.jpg" onclick="ip();"></th><th><img src="image/ball/goldpickaxe.jpg" onclick="gp();"></th><th><img src="image/ball/diapickaxe.jpg" onclick="dp();"></th></tr>        
+									<tr><th>Axe</th><th><img src="image/ball/ironaxe.jpg" onclick="ia();"></th><th><img src="image/ball/goldaxe.jpg" onclick="ga();"></th><th><img src="image/ball/diaaxe.jpg" onclick="da();"></th></tr>        
+								</table>
+							</a>
+						</div>
+					</li>	
+					<!--list 4: skin  -->
+					<li class="item">
+						<div class="thumbnail">
+							<img src="image/icon/skin.jpg">
+						</div>
+						<div class="description">
+							<h4>&#9660; 캐릭터 선택</h4>
+							<a id="section3">
+								<table border="1">
+									<tr><th>skin1</th><th><img src="image/bar/skin1.jpg" onclick="s1();"></th></tr>
+									<tr><th>skin2</th><th><img src="image/bar/skin2.jpg" onclick="s2();"></th></tr>
+									<tr><th>skin3</th><th><img src="image/bar/skin3.jpg" onclick="s3();"></th></tr>
+									<tr><th>skin4</th><th><img src="image/bar/skin4.jpg" onclick="s4();"></th></tr>
+									<tr><th>skin5</th><th><img src="image/bar/skin5.jpg" onclick="s5();"></th></tr>
+								</table>
+							</a>
+						</div>
+					</li>										
+				</ul>
+			</div>
+			<button id="settingToMain" onclick="getMainScreen2()" >go to Main</button>
+			
+		</div>
+	</div>
+
+
+</body>
+</html>

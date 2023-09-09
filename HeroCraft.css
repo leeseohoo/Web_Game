@@ -1,0 +1,209 @@
+/*초기화 코드*/
+*{
+	margin:0;
+ 	padding:0;
+}
+body{
+	width:960px; 
+	height: 700px;
+	margin:0 auto;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border:0;
+}
+
+/*본 내용 코드*/
+
+
+#screen_main {
+	display: block;
+	border: 1px solid black;
+	width : 600px;
+	height: 600px;
+	position: relative;
+}
+
+#screen_main>div>button {
+	position: relative;
+}
+#screen_main>.logo{
+	left: 56px;
+	position: relative;
+}
+#screen_main::before{
+	content:"";
+	background: url("image/background.png");
+	background-size: cover;
+	opacity : 0.9;
+	position: absolute;
+	top : 0px;
+	left : 0px;
+	right: 0px;
+	bottom: 0px;
+}
+.logo{
+	margin-top: 110px;
+	margin-bottom: 60px;
+	z-index: 1;
+}
+.button_component {
+	margin-top: 20px;
+	display: flex;
+	width: 600px;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* control button */
+.button_component > button {
+	width : 300px;
+	height: 50px;
+	border :3px solid black;
+	border-radius: 5px;
+	color: white;
+	background-color: #6E6E6E;
+	box-shadow: 1px 1px 3px 1px #dadce0;
+}
+.button_component>button:hover{
+	cursor:pointer;
+}
+
+canvas{
+	position: absolute;
+	top: 0px;
+	background-image: url("image/background.jpg");
+	background-size: 600px 600px;
+}
+
+#control{
+	position:relative;
+	top:600px;
+	display: none;
+}
+
+
+
+#moveToSetting{
+	position: relative;
+	top: 60px;
+	left: 610px;
+	background-color: black;
+	color:white;
+	border: none;
+	font-size: 15px;
+	padding: 15px;
+	width: 150px;
+	transition-duration: 0.4s;
+	text-decoration: none;
+}
+table{
+	width: 400px;
+}
+
+th>img:hover{
+	cursor:pointer;
+}
+button:hover{
+	cursor:pointer;
+}
+a { text-decoration: none;  }
+a:visited { 
+	text-decoration: none;
+	color:white;
+}
+a:hover { 
+	text-decoration: none; 
+	color:black;
+}
+a:focus { text-decoration: none; 
+}
+.tab-item{
+	font-family: 'Poor Story', cursive;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 600px;
+}
+th{
+	text-align: center;
+}
+.setting_component>#setting_title {display: block; width: 600px; height: 50px; line-height: 30px; text-align: center; background-color: black; color: white;}
+.item {overflow: hidden; width: 600px; padding-top: 15px; padding-bottom: 15px; border-top: none;}
+.thumbnail {float: left;}
+.description {float: left; margin-left: 10px;}
+#setting_screen{
+	display: none;
+	height: 925px;
+	width: 600px;
+	position: absolute;
+	border: 1px solid black;
+}
+.setting_component{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 600px;
+	position: relative;
+}
+#setting_title{
+	background-color:black;
+	color: white;
+	width: 600px;
+	height: 50px;
+	line-height: 50px;
+}
+/* #setting_screen::before{
+	content:"";
+	background: url("image/background.png");
+	background-size: cover;
+	opacity : 0.9;
+	position: absolute;
+	top : 0px;
+	left : 0px;
+	right: 0px;
+	bottom: 0px;
+}
+#setting_screen>div{
+	position: relative;
+} */
+
+li:hover{
+	background-color :black;
+	color : white;
+	transition-duration: 0.8s;
+}
+a>table:hover{
+	background-color: black;
+	color: white;
+	transition-duration: 0.8s;
+}
+a:hover{
+	color: white;
+	transition-duration: 0.8s;
+}
+#settingToMain{
+	margin-top: 30px;
+	width: 500px;
+	height: 80px;
+	border :3px solid black;
+	border-radius: 5px;
+	color: white;
+	background-color: #6E6E6E;
+	box-shadow: 1px 1px 3px 1px #dadce0;
+}
+
+progress{
+   display: none;
+   position: relative;
+   top: 15px;
+   left: 240px;
+}
